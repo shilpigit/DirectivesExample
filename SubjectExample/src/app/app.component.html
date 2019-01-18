@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <h3 *ngFor="let name of userList">
+      {{name}}
+    </h3>
+  </div>
+  <app-subject-example></app-subject-example>
+  <app-subject-example1></app-subject-example1>
+
+<router-outlet></router-outlet>
