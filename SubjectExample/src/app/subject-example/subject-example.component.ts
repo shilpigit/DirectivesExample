@@ -8,13 +8,12 @@ import { SubjectTestingService } from '../service/subject-testing.service';
 })
 export class SubjectExampleComponent implements OnInit {
 
-  constructor(private _subjectTestingService : SubjectTestingService) { }
-
+  constructor(private _subjectTestingService: SubjectTestingService) { }
+  public val: string;
   ngOnInit() {
   }
 
-  OnClick(val: string)
-  {
+  OnClick(val: string) {
     this._subjectTestingService._subObj.next(val);
   }
 
