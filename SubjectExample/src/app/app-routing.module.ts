@@ -6,7 +6,7 @@ import { CreateEmployeeCanDeactivateGuardService } from './service/create-employ
 import { CanDeactivate } from '@angular/router/src/utils/preactivation';
 import { NotfoundComponent } from './notfound.component';
 import { EmployeeDetailsComponent } from './employee/employee-details.component';
-import { CanActivateGuardService } from './service/can-activate-guard.service';
+// import { CanActivateGuardService } from './service/can-activate-guard.service';
 
 const routes: Routes = [
   {path:'employees', children:[
@@ -18,8 +18,8 @@ const routes: Routes = [
       } ,
       {
         path:'details',
-        component:EmployeeDetailsComponent,
-        canActivate:[CanActivateGuardService]
+        component:EmployeeDetailsComponent
+        //canActivate:[CanActivateGuardService]
       }   
     // {path: '', redirectTo:'/list', pathMatch:'full'}
   ]},
@@ -28,8 +28,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-  //providers: [CreateEmployeeCanDeactivateGuardService, CanActivateGuardService]
+  exports: [RouterModule],
+  providers: [CreateEmployeeCanDeactivateGuardService]
 })
 
 export class AppRoutingModule { }
