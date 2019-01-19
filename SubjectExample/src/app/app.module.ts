@@ -8,6 +8,8 @@ import { SubjectExampleComponent } from './subject-example/subject-example.compo
 import { SubjectExample1Component } from './subject-example1/subject-example1.component';
 import { EmployeeCreateComponent } from './employee/employee-create.component';
 import { EmployeeListComponent } from './employee/employee-list.component';
+import { NotfoundComponent } from './notfound.component';
+import { EmployeeDetailsComponent } from './employee/employee-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { EmployeeListComponent } from './employee/employee-list.component';
     SubjectExampleComponent,
     SubjectExample1Component,
     EmployeeCreateComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    NotfoundComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
